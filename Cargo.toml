@@ -1,0 +1,6 @@
+[package]
+name = "cards"
+version = "0.1.0"
+authors = ["Daniel Kavanagh <dan.kava13@gmail.com>"]
+
+[dependencies]
