@@ -34,7 +34,7 @@ pub mod deck {
         }
 
         pub fn shuffle(&mut self) {
-            let mut 
+            let mut rng = rand::Rng;
         }
     }
 }
