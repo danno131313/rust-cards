@@ -1,5 +1,5 @@
 extern crate rand;
-mod cards;
+pub mod cards;
 
 pub mod deck {
     use cards::Card;
