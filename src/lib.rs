@@ -35,8 +35,10 @@ pub mod deck {
 
         pub fn shuffle(&mut self) {
             let mut rng = thread_rng();
-            for i in 0..self.cards.len() {
-                self.cards.swap(i, rng.gen_range(0,52));
+            for _ in 0..10 {
+                for i in 0..self.cards.len() {
+                    self.cards.swap(i, rng.gen_range(0,52));
+                }
             }
         }
     }
