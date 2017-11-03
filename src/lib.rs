@@ -5,7 +5,7 @@ pub mod deck {
     use cards::Card;
     use cards::Suit::*;
     use cards::Value::*;
-    use rand::Rng;
+    use rand::{Rng,thread_rng};
 
     #[derive(Debug)]
     pub struct Deck {
@@ -34,7 +34,10 @@ pub mod deck {
         }
 
         pub fn shuffle(&mut self) {
-            let mut rng = rand::Rng;
+            let mut rng = thread_rng();
+            for i in 0..self.cards.len() {
+                self.cards.swap(i, rng.gen_range(0,52));
+            }
         }
     }
 }
