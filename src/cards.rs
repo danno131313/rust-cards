@@ -1,6 +1,6 @@
 use std::fmt;
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Card {
     pub suit: Suit,
     pub value: Value,
@@ -12,7 +12,7 @@ impl fmt::Display for Card {
     }
 }
 
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub enum Suit {
     Hearts,
     Clubs,
@@ -20,7 +20,7 @@ pub enum Suit {
     Diamonds,
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Value {
     Ace,
     Two,
