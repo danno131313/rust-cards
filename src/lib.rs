@@ -26,7 +26,22 @@ pub mod deck {
                     cards.push(card);
                 }
             }
-            Deck {cards}
+            Deck { cards }
+        }
+
+        pub fn new_empty() -> Deck {
+            let mut cards: Vec<Card> = Vec::new();
+            Deck { cards }
+        }
+
+        pub fn add(&mut self, card: Card) {
+            self.cards.push(card);
+        }
+
+        pub fn add_deck(&mut self, deck: Deck) {
+            for card in deck.cards {
+                self.cards.push(card);
+            }
         }
 
         pub fn draw(&mut self) -> Card {
