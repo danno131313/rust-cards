@@ -38,14 +38,17 @@ pub mod deck {
             self.cards.push(card);
         }
 
-        pub fn add_deck(&mut self, deck: Deck) {
-            for card in deck.cards {
+        pub fn add_deck(&mut self, deck: &mut Deck) {
+            for &card in &deck.cards {
                 self.cards.push(card);
             }
         }
 
-        pub fn draw(&mut self) -> Card {
-            self.cards.remove(0)
+        pub fn draw(&mut self) -> Option<Card> {
+            match self.cards.len() {
+                0 => None,
+                _ => Some(self.cards.remove(0)),
+            }
         }
 
         pub fn shuffle(&mut self) {
