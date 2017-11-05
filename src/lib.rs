@@ -33,6 +33,10 @@ pub mod deck {
             let mut cards: Vec<Card> = Vec::new();
             Deck { cards }
         }
+        
+        pub fn len(&self) -> u32 {
+            (self.cards.len() as u32)
+        }
 
         pub fn add(&mut self, card: Card) {
             self.cards.push(card);
