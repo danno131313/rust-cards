@@ -9,5 +9,5 @@ fn main() {
     let card1 = deck1.draw().expect("Deck is empty!");
     let card2 = deck2.draw().expect("Deck is empty!");
     let same: bool = card1 == card2;
-    println!("{}, {}\nSame: {}", card1, card2, same);
+    println!("{}", deck1.show(2));
 }

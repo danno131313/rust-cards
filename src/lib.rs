@@ -38,6 +38,10 @@ pub mod deck {
             (self.cards.len() as u32)
         }
 
+        pub fn show(&self, idx: usize) -> String {
+            format!("{}", self.cards.get(idx).expect("No card there!"))
+        }
+
         pub fn add(&mut self, card: Card) {
             self.cards.push(card);
         }
