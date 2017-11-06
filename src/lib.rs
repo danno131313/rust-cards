@@ -34,12 +34,12 @@ pub mod deck {
             Deck { cards }
         }
         
-        pub fn len(&self) -> u32 {
-            (self.cards.len() as u32)
+        pub fn len(&self) -> usize {
+            (self.cards.len())
         }
 
-        pub fn show(&self, idx: usize) -> String {
-            format!("{}", self.cards.get(idx).expect("No card there!"))
+        pub fn show(&self, idx: usize) -> &Card {
+            self.cards.get(idx).expect("No card there!")
         }
 
         pub fn add(&mut self, card: Card) {
