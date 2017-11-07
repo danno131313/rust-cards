@@ -46,6 +46,10 @@ pub mod deck {
             self.cards.push(card);
         }
 
+        pub fn add_back(&mut self, card: Card) {
+            self.cards.insert(0, card);
+        }
+
         pub fn add_deck(&mut self, deck: &mut Deck) {
             for _ in 0..deck.len() {
                 self.cards.push(deck.draw().expect("Deck is empty!"));
