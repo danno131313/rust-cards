@@ -46,9 +46,9 @@ pub mod deck {
             self.cards.push(card);
         }
 
-        pub fn add_deck(&mut self, deck: &Deck) {
-            for &card in &deck.cards {
-                self.cards.push(card);
+        pub fn add_deck(&mut self, deck: &mut Deck) {
+            for _ in 0..deck.len() {
+                self.cards.push(deck.draw().expect("Deck is empty!"));
             }
         }
 
@@ -56,6 +56,13 @@ pub mod deck {
             match self.cards.len() {
                 0 => None,
                 _ => Some(self.cards.remove(0)),
+            }
+        }
+
+        pub fn bottom_draw(&mut self) -> Option<Card> {
+            match self.cards.len() {
+                0 => None,
+                _x => Some(self.cards.remove(_x - 1)),
             }
         }
 
