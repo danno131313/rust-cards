@@ -46,7 +46,7 @@ pub mod deck {
             self.cards.push(card);
         }
 
-        pub fn add_deck(&mut self, deck: &mut Deck) {
+        pub fn add_deck(&mut self, deck: &Deck) {
             for &card in &deck.cards {
                 self.cards.push(card);
             }
