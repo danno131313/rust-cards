@@ -30,7 +30,7 @@ pub mod deck {
         }
 
         pub fn new_empty() -> Deck {
-            let mut cards: Vec<Card> = Vec::new();
+            let cards: Vec<Card> = Vec::new();
             Deck { cards }
         }
         
