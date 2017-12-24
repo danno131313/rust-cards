@@ -14,6 +14,7 @@ fn main() {
     let card2 = deck2.draw().expect("Deck is empty!");
     let same: bool = card1 == card2;
     println!("{}", same);
+    deck1.shuffle();
     for i in 0..deck1.len() {
         println!("{}", deck1.show(i));
     }
