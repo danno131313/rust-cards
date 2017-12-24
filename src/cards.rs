@@ -13,6 +13,7 @@ impl fmt::Display for Card {
 }
 
 impl Card {
+    /// Returns whether or not a card is a face card.
     pub fn is_face(&self) -> bool {
         self.value == Value::Ace || self.value == Value::Jack || self.value == Value::Queen || self.value == Value::King
     }

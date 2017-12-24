@@ -1,7 +1,9 @@
 [package]
-name = "cards"
-version = "0.2.0"
+name = "simple-cards"
+version = "1.0.0"
 authors = ["Daniel Kavanagh <dan.kava13@gmail.com>"]
+description = "A simple deck of cards library with some useful functions."
+license = "MIT/Apache-2.0"
 
 [dependencies]
 rand = "0.3"
