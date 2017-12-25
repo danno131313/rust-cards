@@ -1,10 +1,12 @@
 [package]
 name = "simple-cards"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Daniel Kavanagh <dan.kava13@gmail.com>"]
 description = "A simple deck of cards library with some useful functions."
 license = "MIT/Apache-2.0"
 repository = "https://github.com/danno131313/simple-cards-rs"
+keywords = ["cards", "card", "deck"]
+categories = ["games"]
 
 [dependencies]
 rand = "0.3"
